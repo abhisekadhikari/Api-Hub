@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const movieSchema = new mongoose.Schema({
 	rank: { type: Number, required: true },
@@ -18,7 +18,7 @@ const movieSchema = new mongoose.Schema({
 	imdb_link: { type: String, required: true },
 })
 
-const Movie = mongoose.model('movie', movieSchema)
+const Movie = mongoose.model("movie", movieSchema)
 
 module.exports = {
 	Movie,
