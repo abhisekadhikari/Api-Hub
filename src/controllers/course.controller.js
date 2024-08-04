@@ -25,7 +25,6 @@ const enrollCourse = AsyncErrorHandler(async (req, res) => {
 	res.status(201).json({
 		success: true,
 		message: "Course Enrollment successful",
-		data: newEnroll,
 	})
 })
 
