@@ -27,7 +27,7 @@ const courseEnrollSchema = new mongoose.Schema(
 			},
 		},
 
-		course: [
+		courses: [
 			{
 				type: String,
 				required: [true, "At least one course should be selected."],
