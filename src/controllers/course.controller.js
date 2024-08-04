@@ -15,7 +15,7 @@ const enrollCourse = AsyncErrorHandler(async (req, res) => {
 		})
 	}
 
-	const newEnroll = await Enroll.create({
+	await Enroll.create({
 		name,
 		phone,
 		course,
