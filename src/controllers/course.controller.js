@@ -2,7 +2,7 @@ const { Enroll } = require("../models/enroll.model")
 const { AsyncErrorHandler } = require("../utils/AsyncErrorHandler")
 
 const enrollCourse = AsyncErrorHandler(async (req, res) => {
-	const { name, phone, email, course } = req.body
+	const { name, phone, email, courses } = req.body
 
 	const isUserEnrollmentRecordExists = await Enroll.findOne({
 		$or: [{ email }, { phone }],
@@ -18,7 +18,7 @@ const enrollCourse = AsyncErrorHandler(async (req, res) => {
 	await Enroll.create({
 		name,
 		phone,
-		course,
+		courses,
 		email,
 	})
 
