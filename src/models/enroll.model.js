@@ -27,14 +27,12 @@ const courseEnrollSchema = new mongoose.Schema(
 			},
 		},
 
-		courses: [
-			{
+		courses: {
 				type: String,
-				required: [true, "At least one course should be selected."],
+				required: [true, "Course should be selected."],
 				trim: true,
 				lowercase: true,
 			},
-		],
 
 		college: {
 			type: String,
